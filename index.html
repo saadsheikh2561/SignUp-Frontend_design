@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GARAGER</title>
+    <link rel="icon" type="image/x-icon" href="./eye-icons/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+
+
+
+      "
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="external-div">
+      <div class="outer-div">
+        <div class="inner-left-div">
+          <div class="logo-div">
+            <img src="./eye-icons/logo.png" alt="" />
+            <h2>GARAGER</h2>
+          </div>
+
+          <h1>Welcome back</h1>
+          <div class="create-account-div">
+            <p>New to GARAGER?</p>
+            <a href=""><h5>Create an Account</h5></a>
+          </div>
+          <label for="Email" class="col-sm-2 col-form-label">Email</label>
+          <div class="input-box">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Enter your Email Here" />
+          </div>
+          <label for="inputPassword" class="col-sm-2 col-form-label">
+            Password
+          </label>
+
+          <div class="input-box">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="*******" id="myInput" />
+            <span class="eye" onclick="inputfield()">
+              <i id="hide1" class="fa-solid fa-eye"></i>
+              <i id="hide2" class="fa-solid fa-eye-slash"></i>
+            </span>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="defaultCheck1">
+              Remember for 30 days
+            </label>
+          </div>
+          <div class="forget-password-div">
+            <a href="">Forget Password?</a>
+          </div>
+
+          <button type="button">Sign In</button>
+        </div>
+        <div class="inner-right-div">
+          <div class="slider">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+              <input type="radio" name="radio-btn" id="radio4" />
+              <div class="slide first">
+                <img
+                  src="./eye-icons/2.jpg"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./eye-icons/1.jpg"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./eye-icons/3.jpg"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./eye-icons/4.jpg"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+              <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var counter = 1
+    setInterval(function () {
+      document.getElementById('radio' + counter).checked = true
+      counter++
+      if (counter > 4) {
+        counter = 1
+      }
+    }, 5000)
+    function inputfield() {
+      passbtn = document.getElementById('myInput')
+      eyeopen = document.getElementById('hide1')
+      eyeclosed = document.getElementById('hide2')
+      if (passbtn.type == 'password') {
+        passbtn.type = 'text'
+        eyeopen.style.display = 'block'
+        eyeclosed.style.display = 'none'
+      } else {
+        passbtn.type = 'password'
+        eyeopen.style.display = 'none'
+        eyeclosed.style.display = 'block'
+      }
+    }
+  </script>
+</html>
